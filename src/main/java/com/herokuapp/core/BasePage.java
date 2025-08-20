@@ -24,4 +24,10 @@ public class BasePage {
             element.sendKeys(text);
         }
     }
+
+
+    public boolean containsText(String text, WebElement element) {
+        return element.getText().contains(text);
+    }
+
 }

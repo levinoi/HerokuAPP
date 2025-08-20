@@ -20,4 +20,8 @@ public class TestBase {
 
 
     }
+
+    public void stop() {
+        driver.quit();
+    }
 }
