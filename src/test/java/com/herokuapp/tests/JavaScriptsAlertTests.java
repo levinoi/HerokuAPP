@@ -45,7 +45,7 @@ public class JavaScriptsAlertTests extends TestBase {
                 .verifyMessage("Life is great!");
     }
 
-    @AfterEach ()
+    @AfterEach () 
     public void tearDown(){
         stop();
     }
