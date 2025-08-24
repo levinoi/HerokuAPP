@@ -44,4 +44,11 @@ public class HomePage extends BasePage {
         click(dropdown);
         return new SelectPage(driver);
     }
+
+    @FindBy(xpath = "//*[@href='/horizontal_slider']")
+    WebElement slider;
+    public SliderPage clickOnSliderLint() {
+        click(slider);
+        return  new SliderPage(driver);
+    }
 }
