@@ -27,8 +27,7 @@ public class FileUploadPage extends BasePage {
 
     public FileUploadPage submitAndCheck(String text) {
       click(submit);
-    //  getWait(1000);
-        System.out.println(result.getText());
+      System.out.println(result.getText());
         Assertions.assertTrue(containsText(text,result));
         return this;
     }
