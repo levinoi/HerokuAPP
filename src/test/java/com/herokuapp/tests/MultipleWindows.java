@@ -1,6 +1,5 @@
 package com.herokuapp.tests;
 import com.herokuapp.core.TestBase;
-import com.herokuapp.pages.AlertsPage;
 import com.herokuapp.pages.HomePage;
 import com.herokuapp.pages.WindowsPage;
 import org.junit.jupiter.api.BeforeEach;

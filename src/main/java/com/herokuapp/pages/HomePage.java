@@ -67,4 +67,12 @@ public class HomePage extends BasePage {
         click(upload);
         return new FileUploadPage(driver);
     }
+
+    @FindBy(xpath = "//*[@href='/login']")
+    WebElement login;
+
+    public LoginPage openUrl() {
+        click(login);
+        return new LoginPage(driver);
+    }
 }

@@ -47,7 +47,7 @@ public class JavaScriptsAlertTests extends TestBase {
 
     @AfterEach () 
     public void tearDown(){
-        stop();
+        app.stopTest();
     }
 
 }

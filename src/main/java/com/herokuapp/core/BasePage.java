@@ -1,9 +1,12 @@
 package com.herokuapp.core;
 
+import com.herokuapp.pages.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class BasePage {
-    protected WebDriver driver;
+    public static WebDriver driver;
     public static SoftAssertions softly;
     public static Actions actions;
 
@@ -49,4 +52,17 @@ public class BasePage {
         return element.getText().contains(text);
     }
 
+    public void launchBrowser() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+    }
+
+//    public LoginPage openUrl() {
+//
+//         driver.get("https://the-internet.herokuapp.com/login");
+//         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//         return new LoginPage(driver);
+//     }
 }
